@@ -33,7 +33,19 @@ Plug 'antoinemadec/coc-fzf'
 Plug 'sheerun/vim-polyglot'
 Plug 'benmills/vimux'
 Plug 'preservim/nerdtree'
+Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'vim-test/vim-test'
 call plug#end()
+
+" Colorscheme
+colorscheme dracula
+
+let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+if exists('+termguicolors')
+  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+  set termguicolors
+endif
 
 " Misc. mappings
 inoremap jj <Esc>
@@ -55,6 +67,15 @@ nnoremap <C-h> :vertical resize -2<CR>
 nnoremap <C-j> :resize -2<CR>
 nnoremap <C-k> :resize +2<CR>
 nnoremap <C-l> :vertical resize +2<CR>
+
+" CoC - Extensions
+let g:coc_global_extensions = [
+            \ 'coc-json',
+            \ 'coc-tsserver',
+            \ 'coc-html',
+            \ 'coc-css',
+            \ 'coc-go',
+            \ ]
 
 " CoC - Tab navigate completion
 inoremap <expr> <cr> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
@@ -79,9 +100,29 @@ let g:fzf_layout = { 'window': {'width': 0.8, 'height': 0.8} }
 
 " Nerdtree bindings
 let g:NERDTreeShowHidden=1
-nnoremap <leader>st :NERDTreeFind<CR>
+nnoremap <leader>nt :NERDTreeFind<CR>
 nnoremap <leader>t :NERDTreeToggle<CR>
 
 " Airline configuration
 let g:airline_powerline_fonts = 1
 let g:airline_theme='bubblegum'
+
+" Vim Test Keymappings
+nnoremap <leader>ct :TestNearest<CR>
+nnoremap <leader>ft :TestFile<CR>
+
+" Automatically re-order Go imports on save
+autocmd BufWritePre *.go :silent call CocAction('runCommand', 'editor.action.organizeImport')
+
+" Use K to show documentation in preview window.
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  elseif (coc#rpc#ready())
+    call CocActionAsync('doHover')
+  else
+    execute '!' . &keywordprg . " " . expand('<cword>')
+  endif
+endfunction

@@ -1,0 +1,18 @@
+{
+  "suggest.snippetsSupport": false,
+  "go.goplsOptions": {
+    "gofumpt": true
+  },
+  "coc.preferences.formatOnSaveFiletypes": [
+    "go",
+    "graphql",
+    "javascript",
+    "javascriptreact",
+    "json",
+    "rust",
+    "typescript",
+    "typescript.tsx",
+    "typescriptreact",
+    "yaml"
+  ]
+}
