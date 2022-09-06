@@ -75,6 +75,9 @@ let g:coc_global_extensions = [
             \ 'coc-html',
             \ 'coc-css',
             \ 'coc-go',
+            \ 'coc-vetur',
+            \ 'coc-eslint',
+            \ 'coc-tslint',
             \ ]
 
 " CoC - Tab navigate completion
