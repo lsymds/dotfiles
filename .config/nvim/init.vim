@@ -35,6 +35,7 @@ Plug 'benmills/vimux'
 Plug 'preservim/nerdtree'
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'vim-test/vim-test'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 call plug#end()
 
 " Colorscheme
