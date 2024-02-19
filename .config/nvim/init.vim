@@ -36,10 +36,11 @@ Plug 'preservim/nerdtree'
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'vim-test/vim-test'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'shaunsingh/solarized.nvim'
 call plug#end()
 
 " Colorscheme
-colorscheme dracula
+colorscheme solarized
 
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 if exists('+termguicolors')
@@ -109,7 +110,7 @@ nnoremap <leader>t :NERDTreeToggle<CR>
 
 " Airline configuration
 let g:airline_powerline_fonts = 1
-let g:airline_theme='bubblegum'
+let g:airline_theme='solarized'
 
 " Vim Test Keymappings
 nnoremap <leader>ct :TestNearest<CR>
