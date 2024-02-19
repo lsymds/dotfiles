@@ -1,3 +1,5 @@
+#!/bin/zsh
+
 cp .zshrc ~/
 cp .vimrc ~/
 cp -r .themes/ ~/
