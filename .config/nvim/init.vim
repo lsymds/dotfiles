@@ -105,8 +105,8 @@ let g:fzf_layout = { 'window': {'width': 0.8, 'height': 0.8} }
 
 " Nerdtree bindings
 let g:NERDTreeShowHidden=1
-nnoremap <leader>nt :NERDTreeFind<CR>
-nnoremap <leader>t :NERDTreeToggle<CR>
+nnoremap <leader>t :NERDTreeFind<CR>
+nnoremap <leader>nt :NERDTreeToggle<CR>
 
 " Airline configuration
 let g:airline_powerline_fonts = 1
