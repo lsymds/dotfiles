@@ -101,7 +101,7 @@ let $FZF_DEFAULT_COMMAND="rg --files --hidden -g '!dist/' -g '!node_modules/' -g
 let $FZF_DEFAULT_OPTS='--reverse'
 let g:fzf_layout = { 'window': {'width': 0.8, 'height': 0.8} }
 
-:map <C-t> :Files<CR>
+:map <leader>y :Files<CR>
 
 " Nerdtree bindings
 let g:NERDTreeShowHidden=1
