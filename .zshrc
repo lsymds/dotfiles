@@ -9,10 +9,8 @@ for file in ~/.config/aliases/*.bash_aliases; do
     source "$file"
 done
 
-# NVM
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+# Git Credential Manager
+export GCM_CREDENTIAL_STORE=secretservice
 
 # Path
 export PATH=$PATH:/usr/local/go/bin:~/go/bin:~/.n/bin:~/.local/bin
