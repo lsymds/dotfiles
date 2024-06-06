@@ -12,6 +12,19 @@ themes {
         white 192 202 245
         orange 255 158 100
     }
+	rose-pine-dawn {
+		bg "#faf4ed"
+		fg "#575279"
+		red "#b4637a"
+		green "#286983"
+		blue "#56949f"
+		yellow "#ea9d34"
+		magenta "#907aa9"
+		orange "#fe640b"
+		cyan "#d7827e"
+		black "#f2e9e1"
+		white "#575279"
+	}
 }
-theme "tokyo-night"
+theme "rose-pine-dawn"
 default_layout "compact"
