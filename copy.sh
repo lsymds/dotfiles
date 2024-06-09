@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/sh
 
 # Copy files
 cp .zshrc ~/
