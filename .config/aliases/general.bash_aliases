@@ -6,5 +6,5 @@ alias vim="nvim"
 alias q="exit"
 
 # Directory aliases
-alias dcode="cd ~/Code"
+alias dcode="cd ~/code"
 alias dnotes="cd ~/Documents/Important/Notes"

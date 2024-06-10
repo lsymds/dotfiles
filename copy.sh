@@ -9,6 +9,7 @@ cp -r .fonts/ ~/
 
 # Load any dconf configurations
 dconf load /com/gexperts/Tilix/ < tilix.dconf
+dconf load /org/gnome/terminal/legacy/profiles:/ < rose-pine-dawn.dconf
 
 # Source zshrc
 source ~/.zshrc
