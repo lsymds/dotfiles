@@ -13,7 +13,7 @@ done
 export GCM_CREDENTIAL_STORE=secretservice
 
 # Path
-export PATH=$PATH:/usr/local/go/bin:~/go/bin:~/.n/bin:~/.local/bin
+export PATH=$PATH:/usr/local/go/bin:~/go/bin:~/.n/bin:~/.local/bin:~/flutter/flutter/bin
 
 # Mise
 export MISE_SHELL=zsh
