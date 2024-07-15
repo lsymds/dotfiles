@@ -1,0 +1,10 @@
+[/]
+custom-list=['__dummy__', 'custom0']
+
+[custom-keybindings/custom0]
+binding=['Print']
+command='flameshot gui'
+name='Printscreen'
+
+[media-keys]
+screenshot=@as []
